@@ -349,7 +349,7 @@ figure {
 
 #coordonnees h2 {
   margin-bottom: 5px;   /* antes era ~20px por padrão */
-  margin-top: 15px;     /* mantém um pequeno espaço acima */
+  margin-top: 30px;     /* mantém um pequeno espaço acima */
   padding-left: 15px;   /* igual ao estilo anterior */
 }
 
