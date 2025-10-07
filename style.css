@@ -71,3 +71,88 @@ table {
 }
 
 /* Keep menu appearance unchanged */
+
+/* --- General background and layout --- */
+
+body {
+  background-color: LemonChiffon;
+  background-image: none;
+  font-family: "fira-sans", sans-serif;
+  color: rgb(40,40,40);
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.main {
+  max-width: 1000px;
+  margin: auto;
+  background-color: LemonChiffon;
+  padding: 0 50px;
+}
+
+/* --- Restore original look for header --- */
+
+#header {
+  padding: 15px 0;
+  border-bottom: 2px solid Khaki; /* dividing line after header */
+}
+
+#header h1 {
+  font-size: 2em;
+  padding-left: 15px;
+}
+
+#header p {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+}
+
+/* --- Contact section: split in two columns --- */
+
+#contact {
+  padding: 20px 0;
+  border-bottom: 2px solid Khaki; /* separator line at the end */
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-text {
+  flex: 1 1 60%;
+  min-width: 300px;
+}
+
+.contact-photo {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+/* Remove image frame and hover effect */
+#me {
+  border: none;
+  height: 220px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+#me:hover {
+  border: none;
+}
+
+/* Optional: make separators visible across full width */
+section {
+  width: 100%;
+}
+
+/* Optional: improve spacing under the nav menu */
+.cadre nav {
+  margin-bottom: 15px;
+}
