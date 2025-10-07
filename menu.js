@@ -1,11 +1,11 @@
 function menu(no)
 {
-  link = new Array("index.html", "research.html", "links.html", "personal.html")
-  title = new Array('Home', 'Research', 'Links', 'Beyond Mathematics')
+  link = new Array("index.html", "research.html", "personal.html")
+  title = new Array('Home', 'Research', 'Beyond Mathematics')
   document.write('<div class="cadre">')
   document.write('<nav>')
   document.write('<ul>')
-  for( var i = 0; i < 4; ++i)
+  for( var i = 0; i < 3; ++i)
   {
     if (i == no)
       document.write('<li><div title="' + title[i] + '" class="here">' + title[i] + '</div></li>')
