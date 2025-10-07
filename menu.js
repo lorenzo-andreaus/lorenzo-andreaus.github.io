@@ -1,7 +1,7 @@
 function menu(no)
 {
   link = new Array("index.html", "research.html", "talks.html", "links.html", "personal.html")
-  title = new Array('Home', 'Research', 'talks', 'Links', 'Beyond Mathematics')
+  title = new Array('Home', 'Research', 'Talks', 'Links', 'Beyond Mathematics')
   document.write('<div class="cadre">')
   document.write('<nav>')
   document.write('<ul>')
