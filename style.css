@@ -338,7 +338,7 @@ figure {
 }
 
 #moi {
-   flex: 0 0 450px;          /* largura fixa igual ao tamanho da imagem */
+   flex: 0 0 auto;          /* largura fixa igual ao tamanho da imagem */
   text-align: center;
 }
 
