@@ -202,8 +202,8 @@ nav a:active
 #me
 {
   border: none;
-  width: 450px;
-  height: 450px;
+  height: 100%;
+  width: auto;
   padding: -1px;
   border-radius: 0px;
   margin-top: 5px;
@@ -327,7 +327,7 @@ figure {
 #coordonnees {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   flex-wrap: nowrap;
 }
 
@@ -338,8 +338,10 @@ figure {
 }
 
 #moi {
-   flex: 0 0 450px;          /* largura fixa igual ao tamanho da imagem */
+   flex: 0 0 auto;          /* largura fixa igual ao tamanho da imagem */
   text-align: center;
+  display: flex;
+  align-items: stretch;
 }
 
 /* opcional: centralizar verticalmente a imagem */
