@@ -126,7 +126,7 @@ a:active
 {
   position: sticky;
   top: 0;
-  height: auto
+  z-index:1;
 }
 
 nav
