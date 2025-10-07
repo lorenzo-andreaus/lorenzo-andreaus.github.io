@@ -329,6 +329,7 @@ figure {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
+  margin-block-start: 0;
 }
 
 #coordonnees-texte {
