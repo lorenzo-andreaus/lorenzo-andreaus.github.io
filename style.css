@@ -202,15 +202,14 @@ nav a:active
 #me
 {
   border: none;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  width: 450px;
+  height: 450px;
   padding: -1px;
   border-radius: 0px;
   margin-top: 5px;
   margin-left: 30px;
   margin-right: 5px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 #me:hover
@@ -328,7 +327,7 @@ figure {
 #coordonnees {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: nowrap;
 }
 
@@ -339,8 +338,8 @@ figure {
 }
 
 #moi {
-   flex: 0 0 auto;          /* largura fixa igual ao tamanho da imagem */
-  align-items: center;
+   flex: 0 0 450px;          /* largura fixa igual ao tamanho da imagem */
+  text-align: center;
 }
 
 /* opcional: centralizar verticalmente a imagem */
