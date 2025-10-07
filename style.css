@@ -329,7 +329,6 @@ figure {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
-  margin-block-start: 0;
 }
 
 #coordonnees-texte {
@@ -346,4 +345,17 @@ figure {
 /* opcional: centralizar verticalmente a imagem */
 #moi img {
   vertical-align: middle;
+}
+
+#coordonnees h2 {
+  margin-bottom: 5px;   /* antes era ~20px por padrão */
+  margin-top: 10px;     /* mantém um pequeno espaço acima */
+  padding-left: 15px;   /* igual ao estilo anterior */
+}
+
+#coordonnees p {
+  margin-top: 5px;      /* reduz espaço após o título */
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
 }
