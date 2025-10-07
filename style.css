@@ -124,6 +124,7 @@ a:active
 
 nav
 {
+  position:sticky;
   display: inline-block;
   width: 72%;
   text-align: left;
