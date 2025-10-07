@@ -122,9 +122,14 @@ a:active
 
 /* Menu navigation */
 
+.header
+{
+  position: sticky;
+  top: 0;
+}
+
 nav
 {
-  position:sticky;
   display: inline-block;
   width: 72%;
   text-align: left;
