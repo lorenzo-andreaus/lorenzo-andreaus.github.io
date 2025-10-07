@@ -327,16 +327,17 @@ figure {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 #coordonnees-texte {
-  flex: 1 1 60%;
-  min-width: 300px;
+  flex: 1 1 auto;
+  min-width: 250px;
+  margin-right: 20px;
 }
 
 #moi {
-  flex: 1 1 35%;
+   flex: 0 0 450px;          /* largura fixa igual ao tamanho da imagem */
   text-align: center;
 }
 
