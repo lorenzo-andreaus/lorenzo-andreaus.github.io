@@ -201,12 +201,14 @@ nav a:active
 
 #me
 {
-  border: 6px solid DarkSlateGray;
-  height: 200px;
+  border: none;
+  width: 450px;
+  height: 450px;
   padding: -1px;
-  border-radius: 5px;
+  border-radius: 0px;
   margin-top: 10px;
   margin-left: 30px;
+  object-fit: cover;
 }
 
 #me:hover
