@@ -18,6 +18,11 @@ h1 {
   margin-bottom: 30px;
 }
 
+.nosee_link a
+{
+  text-decoration: none;
+}
+
 .poema p {
   line-height: 1.7;
   margin: 0 0 40px 0;
