@@ -1,105 +1,75 @@
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-<title>Lorenzo Andreaus - Personal Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Poemas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body>
+  <div class="container">
+    <div class="arrow left" id="prev">←</div>
 
-<body class="nosee_link">
-
-<div class="main">
-
-<div class="cadre topo">
-<nav>
-<ul>
-<li>
-<a title="Home" href="https://lorenzo-andreaus.github.io">Home</a>
-</li>
-<li>
-<a title="Research" href="#research">Research</a>
-</li>
-<li>
-<a title="Beyond Mathematics" href="#personal">Beyond Mathematics</a>
-</li>
-</ul>
-</nav>
-</div>
-    
-<section class="cadre">
-
-    <div id="coordonnees">
-     <div id="coordonnees-texte">
-        <h1> Lorenzo Andreaus </h1>
-        <p>I am currently a PhD student at <a href="https://u-paris.fr">Université Paris Cité</a>, under the supervision of 
-        <a href="https://webusers.imj-prg.fr/~marc.hindry/home_uk.html">Marc Hindry</a> and 
-        <a href="https://webusers.imj-prg.fr/~cyril.demarche/">Cyril Demarche</a>. I am studying 
-            <a href="https://encyclopediaofmath.org/wiki/Abelian_scheme">families of abelian varieties</a> and their
-        applications to counting <a href="https://en.wikipedia.org/wiki/Rational_point">rational points</a> on 
-            <a href="https://en.wikipedia.org/wiki/Projective_variety">projective varieties</a>.
-        <br>
-        <br>
-        You can find my CV <a href="curriculum-vitae.pdf">here</a>.</p>
-         <h2> Contact </h2>
-    <div id="coordonnees">
-        <p><a href="https://www.imj-prg.fr">Institut de Mathématiques de Jussieu - Paris Rive Gauche (IMJ-PRG)
-</a><br>
-        <a href="https://u-paris.fr">Université Paris Cité</a><br>
-        Bâtiment Sophie Germain (PRG), Bureau 752<br>
-       8 Place Aurélie Nemours, 75205 PARIS Cedex 13 <br><br>
-        <strong>Email: </strong>lorenzo(dot)andreaus(at)imj-prg(dot)fr
-        </p>
+    <div class="poem-container">
+      <h1 id="title"></h1>
+      <div id="text"></div>
     </div>
-         </div>
 
-        <div id="moi">
-    <a href="curriculum-vitae.pdf"><img title="CV" alt="me" src="foto-de-perfil.jpg" id="me"></a>
-    </div>
-        
-        
-    </div>
-</section>
+    <div class="arrow right" id="next">→</div>
+  </div>
 
-<section class="cadre" id="research">
-<h2>Publications</h2>
-<ul>
-<li>
-    
-</li>
-</ul>
+  <script>
+    const poems = [
+      {
+        title: "Poema 1 — Aurora",
+        texto: `
+          A manhã desperta lenta,<br>
+          Com os olhos cheios de sol.<br>
+          <em>Meu corpo ainda é sombra</em><br>
+          Mas o dia já me chama.
+        `
+      },
+      {
+        title: "Poema 2 — Mar",
+        texto: `
+          O mar me conta segredos,<br>
+          Que o vento espalha no ar.<br>
+          <em>Sou concha vazia,</em><br>
+          À espera do som do lugar.
+        `
+      },
+      {
+        title: "Poema 3 — Noite",
+        texto: `
+          A noite vem devagar,<br>
+          Com passos de estrela e lua.<br>
+          <em>Silêncio é seu canto,</em><br>
+          E o sonho é sua rua.
+        `
+      }
+    ];
 
-<h2>Talks</h2>
-<ul>
-<li></li>
-</ul>
+    let current = 0;
 
-<h2>Other Writings</h2>
-<ul>
-<li><a href="https://bdta.abcd.usp.br/item/003064080">Bachelor Thesis: “Algebraic Number Theory and Introduction to Class Field Theory” (in Portuguese)</a>
-</li>
+    const titleEl = document.getElementById("title");
+    const textEl = document.getElementById("text");
 
-<li><a href="master-thesis.pdf">Master Thesis: “Equidistribution in Families of Abelian Varieties and Uniformity"</a>
-</li>
-</ul>    
-</section>
+    function renderPoem() {
+      titleEl.textContent = poems[current].title;
+      textEl.innerHTML = poems[current].texto;
+    }
 
-<section class="cadre" id="personal">
-<h2>Beyond Mathematics</h2>
-<ul>
-<li>
-<a href="">Playing the piano</a>
-</li>
+    document.getElementById("next").addEventListener("click", () => {
+      current = (current + 1) % poems.length;
+      renderPoem();
+    });
 
-<li>
-<a href="partituras.html">Piano compositions</a>
-</li>
+    document.getElementById("prev").addEventListener("click", () => {
+      current = (current - 1 + poems.length) % poems.length;
+      renderPoem();
+    });
 
-<li>
-<a href="poemas.html">Poems I wrote (in Portuguese)</a>
-</li>
-</ul>
-</section>
-    
-</div>
+    renderPoem();
+  </script>
 </body>
 </html>
