@@ -16,6 +16,7 @@
   </div>
 </div>
 
+<!-- COLOCAR O SCRIPT AQUI, ANTES DE </body> -->
 <script>
 const poemas = [
   {
@@ -63,4 +64,9 @@ document.getElementById("prev").onclick = () => {
 };
 
 document.getElementById("next").onclick = () => {
-  atual = (atual + 1)
+  atual = (atual + 1) % poemas.length;
+  mostrarPoema(atual);
+};
+</script>
+</body>
+</html>
