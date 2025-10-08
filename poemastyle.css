@@ -55,6 +55,7 @@ h1 {
 .leftpane {
   width: 25%;
   height: 100vh;
+  position: relative;
 }
 
 .middlepane {
@@ -65,6 +66,7 @@ h1 {
 .rightpane {
   width: 25%;
   height: 100vh;
+  position: relative;
 }
 
 
