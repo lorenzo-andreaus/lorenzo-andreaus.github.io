@@ -6,114 +6,76 @@
 </head>
 
 <body>
-<div class="main">
-  <h1 id="titulo"></h1>
-  <div id="texto" class="poema"></div>
+  <div class="page">
 
-  <div class="nav-arrows">
-    <span class="arrow" id="prev">&#8592;</span>
-    <span class="arrow" id="next">&#8594;</span>
+    <!-- seta esquerda -->
+    <div class="side left">
+      <span class="arrow" id="prev">&#8592;</span>
+    </div>
+
+    <!-- área central com o poema -->
+    <div class="center">
+      <h1 id="titulo"></h1>
+      <div id="texto" class="poema"></div>
+    </div>
+
+    <!-- seta direita -->
+    <div class="side right">
+      <span class="arrow" id="next">&#8594;</span>
+    </div>
+
   </div>
-</div>
 
-<!-- COLOCAR O SCRIPT AQUI, ANTES DE </body> -->
-<script>
-const poemas = [
-  {
-    titulo: "",
-    texto: `
-<p>Geralmente n&atilde;o vou t&atilde;o direto ao ponto <br>
-Ao contr&aacute;rio, sou at&eacute; demais contido <br>
-Balbucio mil palavras sem sentido <br>
-Rio de nervoso, me apavoro, me amedronto</p>
+  <script>
+  const poemas = [
+    {
+      titulo: "Poema 1 — Aurora",
+      texto: `
+A manhã desperta lenta,<br>
+Com os olhos cheios de sol.<br>
+<em>Meu corpo ainda é sombra</em><br>
+Mas o dia já me chama.
+      `
+    },
+    {
+      titulo: "Poema 2 — Marés",
+      texto: `
+O mar respira em ondas,<br>
+<strong>Como quem reza sem voz.</strong><br>
+Eu sigo o ritmo antigo<br>
+De quem busca e nunca acha.
+      `
+    },
+    {
+      titulo: "Poema 3 — Noite",
+      texto: `
+Há um silêncio na noite<br>
+Que nem o vento desmancha.<br>
+E eu me sento à beira do escuro,<br>
+Esperando a lua chegar.
+      `
+    }
+  ];
 
-<p>Irracionalmente, agi sem discernimento<br>
-Esperando que talvez fosse melhor assim<br>
-Lam&uacute;ria, entretanto, &eacute; tudo que restou pra mim<br>
-Aliada a imensur&aacute;vel arrependimento</p>
+  let atual = 0;
 
-<p>O que eu n&atilde;o daria pra voltar &agrave;quela ocasi&atilde;o<br>
-Limpar o que passou, recome&ccedil;ar do in&iacute;cio<br>
-Imprudente momento que me levou ao precip&iacute;cio!<br>
-V&atilde;, por&eacute;m, &eacute; toda a minha divaga&ccedil;&atilde;o</p>
-
-<p>E todos sabem que o passado n&atilde;o se altera<br>
-Inspira&ccedil;&atilde;o &eacute; o que sobra, e c&aacute; estou<br>
-Remoendo cada detalhe de um tempo que j&aacute; passou<br>
-A esperar por ventos melhores na pr&oacute;xima primavera</p>
-    `
-  },
-  {
-    titulo: "",
-    texto: `
-<p>Ilus&atilde;o primaveril essa de que</p>
-<p>Tudo fluiria de uma vez</p>
-<p>De que seria f&aacute;cil como andar</p>
-<p>De que dependeria s&oacute; de mim</p>
-<p>&nbsp;</p>
-<p>Que a vida prega pe&ccedil;as, bem j&aacute; sei</p>
-<p>S&oacute; parece que essa espera n&atilde;o tem fim</p>
-<p>Agonizo n&atilde;o de s&uacute;bita mol&eacute;stia</p>
-<p>Mas de uma ang&uacute;stia lenta e pesarosa</p>
-<p>Que tira de meu rosto pouco a pouco todo o rosa</p>
-<p>Que me empalidece tal qual uma anemia</p>
-<p>&nbsp;</p>
-<p>Verdade seja dita, n&atilde;o h&aacute; melhor analogia</p>
-<p>O que &eacute; a car&ecirc;ncia, se n&atilde;o uma anemia?</p>
-<p>Doen&ccedil;a sorrateira, que aos poucos se apossa</p>
-<p>Quando menos se espera, a fadiga toma conta</p>
-<p>O an&ecirc;mico, abatido, j&aacute; nem se desaponta</p>
-<p>E convive naturalmente com aquilo que o destro&ccedil;a</p>
-<p>&nbsp;</p>
-<p>E o que seria a paix&atilde;o, se n&atilde;o mais outro sintoma, outra dor?</p>
-<p>Falta de ar, tontura, cora&ccedil;&atilde;o acelerado</p>
-<p>Triste &eacute; o pesar de um apaixonado</p>
-<p>De um an&ecirc;mico de amor</p>
-    `
-  },
-  {
-    titulo: "",
-    texto: `
-<p>N&atilde;o &eacute; na presen&ccedil;a da fulgurosa chama</p>
-<p>Que melhor se sente seu profundo ardor</p>
-<p>E sim quando se esvai todo seu calor</p>
-<p>Quando a saudade bate forte e o peito, g&eacute;lido, inflama</p>
-<p>&nbsp;</p>
-<p>O Sol j&aacute; n&atilde;o brilha forte como outrora</p>
-<p>E a temperatura ambiente j&aacute; parece congelante</p>
-<p>Na aus&ecirc;ncia da tal chama flamejante<span class="Apple-converted-space">&nbsp;</span></p>
-<p>Que para retornar j&aacute; se demora</p>
-<p>&nbsp;</p>
-<p>Mas eis que chega o t&atilde;o sonhado dia</p>
-<p>Em que a chama reaparece, imponente</p>
-<p>Ofuscando tudo que h&aacute; no lugar</p>
-<p>&nbsp;</p>
-<p>E ao tentar me aproximar da chama, paraliso, impotente</p>
-<p>T&atilde;o perto de alcan&ccedil;ar a alegria</p>
-<p>Mas com receio demais de me queimar</p>
-    `
+  function mostrarPoema(i) {
+    const poema = poemas[i];
+    document.getElementById("titulo").innerText = poema.titulo;
+    document.getElementById("texto").innerHTML = poema.texto;
   }
-];
 
-let atual = 0;
-
-function mostrarPoema(i) {
-  const poema = poemas[i];
-  document.getElementById("titulo").innerText = poema.titulo;
-  document.getElementById("texto").innerHTML = poema.texto;
-}
-
-mostrarPoema(atual);
-
-document.getElementById("prev").onclick = () => {
-  atual = (atual - 1 + poemas.length) % poemas.length;
   mostrarPoema(atual);
-};
 
-document.getElementById("next").onclick = () => {
-  atual = (atual + 1) % poemas.length;
-  mostrarPoema(atual);
-};
-</script>
+  document.getElementById("prev").onclick = () => {
+    atual = (atual - 1 + poemas.length) % poemas.length;
+    mostrarPoema(atual);
+  };
+
+  document.getElementById("next").onclick = () => {
+    atual = (atual + 1) % poemas.length;
+    mostrarPoema(atual);
+  };
+  </script>
 </body>
 </html>
