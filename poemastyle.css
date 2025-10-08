@@ -1,5 +1,5 @@
 body {
-  background: #fff8dc; /* cor suave */
+  background: #fff8dc;
   font-family: 'Georgia', serif;
   color: #222;
   text-align: center;
@@ -8,20 +8,19 @@ body {
 }
 
 .main {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
 }
 
 h1 {
   font-size: 1.8em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-p {
-  white-space: pre-line; /* mantém quebras de linha no poema */
+.poema p {
   font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 40px;
+  line-height: 1.7;
+  margin: 0 0 40px 0;
 }
 
 .nav-arrows {
@@ -34,6 +33,7 @@ p {
   font-size: 2.5em;
   text-decoration: none;
   color: #444;
+  cursor: pointer;
   transition: color 0.3s;
 }
 
