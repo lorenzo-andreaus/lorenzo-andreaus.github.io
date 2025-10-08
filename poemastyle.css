@@ -3,7 +3,7 @@ body {
   font-family: 'Georgia', serif;
   color: #222;
   text-align: center;
-  margin: 0;
+  margin: 0!important;
   padding: 40px;
 }
 
@@ -55,24 +55,18 @@ h1 {
 .leftpane {
   width: 25%;
   height: 100vh;
-  background-color: rosybrown;
 }
 
 .middlepane {
   width: 50%;
   height: 100vh;
-  background-color: royalblue;
 }
 
 .rightpane {
   width: 25%;
   height: 100vh;
-  background-color: yellow;
 }
 
-body {
-  margin: 0!important;
-}
 
 .d-flex {
   display: flex;
