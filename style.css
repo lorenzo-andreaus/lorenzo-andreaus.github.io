@@ -1,53 +1,368 @@
-body {
-  background: #fff8dc;
-  font-family: 'Georgia', serif;
-  color: #222;
-  margin: 0;
-  height: 100vh;
-  display: flex;
+/* général */
+
+*
+{
+  color: rgb(40,40,40);
+  font-family: "fira-sans", sans-serif;
 }
 
-.page {
-  display: flex;
-  width: 100%;
-  height: 100vh;
+*::-moz-selection{ 
+  background-color: Orange;
+  color: Black;
 }
 
-.side {
-  width: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+*::selection{
+  background-color: Orange;
+  color: Black;
 }
 
-.center {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 0 40px;
+body
+{
+  background: SlateGray;
+  background-image: url("pictures/darkbg.png");
+  font-size: 100%;
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
-h1 {
-  font-size: 1.8em;
-  margin-bottom: 30px;
+.main
+{
+  max-width: 1000px;
+  min-height: 92vh;
+  background-color: rgb(250, 250, 250);
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.poema {
+.cadre
+{
+  background-color: LemonChiffon; /* rgba(240, 215, 82, 0.7); */
+  border: 1px solid Khaki;
+  border-radius: 10px;
+  box-shadow: 6px 6px 4px DimGray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 99%;
+  min-width: 725px;
+  padding: 0px 0px 5px 5px; /* haut droite bas gauche */
+}
+
+p
+{
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+}
+
+h1
+{
+  font-size: 2em;
+  padding-left: 15px;
+}
+
+h2
+{
+  font-size: 1.5em;
+  padding-left: 15px;
+}
+
+h3
+{
   font-size: 1.2em;
-  line-height: 1.7;
+  background-color: LemonChiffon; /* rgba(240, 215, 82, 0.7); */
+  border: 1px solid Khaki;
+  padding-left: 8px;
+  border-radius: 7px;
+  width: 98%;
+  box-shadow: 3px 3px 2px DimGray;
 }
 
-.arrow {
-  font-size: 3em;
-  color: #444;
-  cursor: pointer;
-  transition: color 0.3s, transform 0.2s;
-  user-select: none;
+h3 strong
+{
+  text-decoration: underline;
 }
 
-.arrow:hover {
-  color: #888;
-  transform: scale(1.2);
+h4
+{
+  padding-left: 8px;
+}
+
+.nosee_link a
+{
+  text-decoration: none;
+}
+
+.see_link p a
+{
+  text-decoration: underline;
+}
+
+a:hover 
+{
+  color: SlateGray;
+}
+
+a b, a sup
+{
+  color: inherit;
+}
+
+a:active
+{
+  color: DarkRed;
+}
+
+
+
+
+/* Menu navigation */
+
+.topo
+{
+  position: sticky;
+  top: 0;
+  z-index:1;
+}
+
+nav
+{
+  display: inline-block;
+  width: 72%;
+  text-align: left;
+}
+
+nav ul
+{
+  list-style-type: none;
+}
+
+nav li
+{
+  display: inline-block;
+  margin-right: 12px;
+}
+
+nav a, .here
+{
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+nav a:hover
+{
+  color: SlateGray;
+  border-bottom: 3px solid SlateGray;
+}
+
+nav a:active
+{
+  color: red;
+  border-bottom: 3px solid FireBrick;
+}
+
+.here
+{
+  border-bottom: 3px solid rgb(40,40,40);
+}
+
+/* Images */
+
+#coordonnees th
+{
+  text-align: right;
+}
+
+#coordonnees, #moi
+{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo, #logoTlse, #siteswap
+{
+  opacity: 1;
+  height: 100%;
+  padding: 0px 0px 0px 0px;
+  border: 0;
+  border-radius: 0px 10px 10px 0px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  max-width: 210px;
+}
+
+#jongleur
+{
+  padding: 10px;
+}
+
+.picture_blend, .logo
+{
+  mix-blend-mode: multiply;
+}
+
+#me
+{
+  border: none;
+  width: 380px;
+  height: 380px;
+  padding: -1px;
+  border-radius: 0px;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-right: 5px;
+  object-fit: cover;
+}
+
+#me:hover
+{
+  border: 1px solid DimGray;
+}
+
+/* liste articles */
+
+.article_titre
+{
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.article_lien
+{
+  font-style: normal;
+  font-weight: bold;
+}
+
+.article_coauteurs
+{
+}
+
+.article_journal
+{
+  font-size: 0.9em;
+}
+
+.article_DOI
+{
+  font-size: 0.7em;
+  color: red; 
+}
+
+.article_liste li
+{
+  margin: 0 0 10px 0; /* haut droite bas gauche */
+}
+
+.compact_list li
+{
+  margin: 0 0 0 0;
+}
+
+.article_liste ul, .compact_list ul
+{
+  list-style-type: none;
+}
+
+.sarkitor
+{
+  color: red;
+}
+
+.sarkirel
+{
+  color: blue;
+}
+
+/* liste conferences */
+
+.conf_liste
+{
+  text-align: left;  vertical-align: top; margin: auto; width: 99%; border-spacing: 0px 10px;
+}
+
+.conf_liste tr:hover
+{
+  background-color: rgba(240, 204, 51, 0.7);
+}
+
+.conf_liste td
+{
+  padding-left: 10px;
+
+}
+
+/* video sarkirel */
+.video
+{
+   display: inline-block; 
+   width: 23%;
+   margin: 2px;
+   border: 4px solid DimGray;
+}
+
+.video1
+{
+   display: inline-block; 
+   width: 90%;
+   padding: 2px;
+   margin: 2px;
+   border: 4px solid DimGray;
+}
+
+figcaption
+{
+}
+
+.canvas
+{
+    display: inline-block; 
+    margin: 2px;
+    border: 4px solid DimGray;
+}
+
+figure {
+    display: inline-block; 
+}
+
+/* Dividir o bloco "Coordonnees" horizontalmente */
+#coordonnees {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+#coordonnees-texte {
+  flex: 1 1 auto;
+  min-width: 250px;
+  margin-right: 20px;
+}
+
+#moi {
+   flex: 0 0 400px;          /* largura fixa igual ao tamanho da imagem */
+  text-align: center;
+}
+
+/* opcional: centralizar verticalmente a imagem */
+#moi img {
+  vertical-align: middle;
+}
+
+#coordonnees h2 {
+  margin-bottom: 5px;   /* antes era ~20px por padrão */
+  margin-top: 30px;     /* mantém um pequeno espaço acima */
+  padding-left: 15px;   /* igual ao estilo anterior */
+}
+
+#coordonnees p {
+  margin-top: 5px;      /* reduz espaço após o título */
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
 }
