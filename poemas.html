@@ -21,22 +21,46 @@ const poemas = [
   {
     titulo: "Poema 1 — Aurora",
     texto: `
-      <p>
-      A manhã desperta lenta,<br>
-      Com os olhos cheios de sol.<br>
-      <em>Meu corpo ainda é sombra</em><br>
-      Mas o dia já me chama.
-      </p>
+A manhã desperta lenta,<br>
+Com os olhos cheios de sol.<br>
+<em>Meu corpo ainda é sombra</em><br>
+Mas o dia já me chama.
     `
   },
   {
     titulo: "Poema 2 — Marés",
     texto: `
-      <p>
-      O mar respira em ondas,<br>
-      <strong>Como quem reza sem voz.</strong><br>
-      Eu sigo o ritmo antigo<br>
-      De quem busca e nunca acha.
-      </p>
+O mar respira em ondas,<br>
+<strong>Como quem reza sem voz.</strong><br>
+Eu sigo o ritmo antigo<br>
+De quem busca e nunca acha.
+    `
+  },
+  {
+    titulo: "Poema 3 — Noite",
+    texto: `
+Há um silêncio na noite<br>
+Que nem o vento desmancha.<br>
+E eu me sento à beira do escuro,<br>
+Esperando a lua chegar.
     `
   }
+];
+
+let atual = 0;
+
+function mostrarPoema(i) {
+  const poema = poemas[i];
+  document.getElementById("titulo").innerText = poema.titulo;
+  document.getElementById("texto").innerHTML = poema.texto;
+}
+
+mostrarPoema(atual);
+
+document.getElementById("prev").onclick = () => {
+  atual = (atual - 1 + poemas.length) % poemas.length;
+  mostrarPoema(atual);
+};
+
+document.getElementById("next").onclick = () => {
+  atual = (atual + 1)
