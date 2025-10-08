@@ -74,9 +74,17 @@ h1 {
   display: flex;
 }
 
-.arrow-div {
+.arrow-div{
   position: absolute;
   top: 25%;
   left: 50%;
   margin: -25px 0 0 -25px;
+}
+
+.arrow-left{
+  left:75%
+}
+
+.arrow-right{
+  left: 25%
 }
