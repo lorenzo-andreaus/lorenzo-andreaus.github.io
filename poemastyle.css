@@ -1,0 +1,42 @@
+body {
+  background: #fff8dc; /* cor suave */
+  font-family: 'Georgia', serif;
+  color: #222;
+  text-align: center;
+  margin: 0;
+  padding: 40px;
+}
+
+.main {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+p {
+  white-space: pre-line; /* mantém quebras de linha no poema */
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  font-size: 2.5em;
+  text-decoration: none;
+  color: #444;
+  transition: color 0.3s;
+}
+
+.arrow:hover {
+  color: #888;
+}
