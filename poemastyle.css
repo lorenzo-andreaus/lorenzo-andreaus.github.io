@@ -1,6 +1,7 @@
 body {
   background: #fff8dc;
   font-family: 'Times New Roman', serif;
+  font-size: 20px;
   color: #222;
   text-align: center;
   margin: 0!important;
@@ -18,7 +19,6 @@ h1 {
 }
 
 .poema p {
-  font-size: 20px;
   line-height: 1.7;
   margin: 0 0 40px 0;
 }
