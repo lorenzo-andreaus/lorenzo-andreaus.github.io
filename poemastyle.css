@@ -3,7 +3,7 @@ body {
   font-family: 'Times New Roman', serif;
   font-size: 20px;
   color: rgb(183,202,212);
-  text-align: center;
+  text-align: left;
   margin: 0!important;
   padding: 40px;
 }
@@ -55,6 +55,7 @@ h1 {
 .toppane {
   width: 100%;
   height: 50px;
+  text-align: center;
 }
 
 .leftpane {
@@ -75,8 +76,8 @@ h1 {
 }
 
 .bottompane {
-  margin-left:50px;
-  margin-right:50px;
+  margin-left:200px;
+  margin-right:200px;
 }
 
 .d-flex {
