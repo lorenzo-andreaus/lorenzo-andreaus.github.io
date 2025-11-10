@@ -92,9 +92,11 @@ h4
   padding-left: 8px;
 }
 
-.nosee_link a
-{
-  text-decoration: none;
+.nosee_link a {
+  color: inherit;               /* mesma cor do texto, normalmente preto */
+  text-decoration: none;        /* sem sublinhado */
+  font-weight: 500;             /* levemente mais espesso */
+  transition: color 0.2s ease;  /* transição suave para hover */
 }
 
 .see_link p a
