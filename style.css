@@ -93,10 +93,8 @@ h4
 }
 
 .nosee_link a {
-  color: inherit;               /* mesma cor do texto, normalmente preto */
+  color: SlateGray;             
   text-decoration: none;        /* sem sublinhado */
-  font-weight: 500;             /* levemente mais espesso */
-  transition: color 0.2s ease;  /* transição suave para hover */
 }
 
 .see_link p a
