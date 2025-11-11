@@ -104,8 +104,8 @@ h4
   text-decoration: underline;
 }
 
-a:hover {
-  color: DimGray;
+.nosee_link a:hover {
+  color: SlateGray;
 }
 
 a b, a sup
@@ -370,4 +370,5 @@ figure {
 
 .topo a {
   border-bottom: none !important;
+  transition: none !important;
 }
