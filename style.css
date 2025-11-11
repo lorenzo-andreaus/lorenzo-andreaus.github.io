@@ -367,6 +367,6 @@ figure {
   text-align: justify;
 }
 
-#topo a {
-  color: Black;
+.topo a {
+  color: Black !important;
 }
