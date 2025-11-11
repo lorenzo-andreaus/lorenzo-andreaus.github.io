@@ -104,9 +104,8 @@ h4
   text-decoration: underline;
 }
 
-a:hover 
-{
-  color: SlateGray;
+a:hover {
+  border-bottom-color: rgba(0,0,0,0.6);
 }
 
 a b, a sup
@@ -370,5 +369,5 @@ figure {
 }
 
 .topo a {
-  border-bottom: none;
+  border-bottom: none !important;
 }
