@@ -105,7 +105,7 @@ h4
 }
 
 a:hover {
-  border-bottom-color: rgba(0,0,0,0.6);
+  color: DimGray;
 }
 
 a b, a sup
