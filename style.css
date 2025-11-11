@@ -93,8 +93,10 @@ h4
 }
 
 .nosee_link a {
-  color: DimGray;             
-  text-decoration: none;        /* sem sublinhado */
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(0,0,0,0.2);
+  transition: 0.2s;
 }
 
 .see_link p a
