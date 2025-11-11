@@ -370,5 +370,5 @@ figure {
 }
 
 .topo a {
-  color: Black !important;
+  border-bottom: none;
 }
